@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Band Store · One‑Click Bundles (Beta)</title>
+  <!-- MDBootstrap CSS (CSS only) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.2.0/mdb.min.css" rel="stylesheet" />
+  <!-- Font Awesome (icons; CSS only) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
+  <style>
+    body { background: #f7f7f9; }
+    .bundle-card { transition: box-shadow .2s ease; cursor: pointer; }
+    .bundle-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .logo-placeholder {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg,#e3f2fd,#e8eaf6);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #455a64;
+    }
+    .product-thumb { width: 100%; aspect-ratio: 16/9; background: #eceff1; border-radius: .5rem; }
+    .note-muted { font-size: .9rem; color: #6b7280; }
+    .sticky-summary { position: sticky; top: 1.25rem; }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav (logo placeholder; replace later) -->
+  <header class="bg-white border-bottom">
+    <div class="container py-3 d-flex align-items-center gap-3">
+      <div class="logo-placeholder">B</div>
+      <div>
+        <h5 class="mb-0">Your Band</h5>
+        <small class="text-muted">Official Store • Checkout (beta) </small>
+      </div>
+      <div class="ms-auto d-none d-md-flex align-items-center gap-3">
+        <i class="fa-solid fa-lock"></i>
+        <span class="text-muted">Secure Stripe checkout (Beta)</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+
+      <!-- Left column: bundles only (one‑click to Stripe) -->
+      <div class="col-lg-8">
+        <section class="mb-4">
+          <h4 class="mb-3">Choose your bundle</h4>
+          <p class="note-muted mb-4">Buy one bundle at a time. Clicking a card takes you to a secure Stripe checkout page.</p>
+
+          <div class="row g-3">
+
+            <!-- Bundle 1 -->
+            <div class="col-md-6">
+              <div class="card bundle-card h-100 p-3 position-relative">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-primary">Starter</span>
+                </div>
+                <div class="product-thumb mb-3 d-flex align-items-center justify-content-center text-muted">
+                  <span>Bundle image</span>
+                </div>
+                <h5 class="card-title">T‑Shirts + Vinyls (Small Set)</h5>
+                <p class="note-muted mb-3">A compact combo for new fans.</p>
+                <ul class="list-unstyled mb-3">
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>2× T‑shirts (assorted designs)</li>
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>1× Vinyl record</li>
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>Digital download code</li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div>
+                    <div class="fw-bold">$59</div>
+                    <small class="text-muted">incl. taxes where applicable</small>
+                  </div>
+<a href="#" 
+   class="btn btn-primary btn-lg" 
+   role="button" 
+   aria-label="Buy Starter bundle on Stripe" 
+   target="_blank" 
+   rel="noopener">
+  Buy Starter Bundle
+</a>
+                </div>
+                <!-- TODO: replace the href with your own Stripe Payment Link for the Starter bundle -->
+              </div>
+            </div>
+
+            <!-- Bundle 2 -->
+            <div class="col-md-6">
+              <div class="card bundle-card h-100 p-3 position-relative">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-info">Fan Favorite</span>
+                </div>
+                <div class="product-thumb mb-3 d-flex align-items-center justify-content-center text-muted">
+                  <span>Bundle image</span>
+                </div>
+                <h5 class="card-title">T‑Shirts + Vinyls (Medium Set)</h5>
+                <p class="note-muted mb-3">More shirts. More wax.</p>
+                <ul class="list-unstyled mb-3">
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>3× T‑shirts (assorted designs)</li>
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>2× Vinyl records</li>
+                  <li><i class="fa-regular fa-circle-check me-2 text-success"></i>Stickers & lyric card</li>
+                </ul>
+                <div class="d-flex align-items-center justify-content-between mt-auto">
+                  <div>
+                    <div class="fw-bold">$109</div>
+                    <small class="text-muted">bundle value save 15%</small>
+                  </div>
+                  <a href="#" 
+   class="btn btn-primary btn-lg" 
+   role="button" 
+   aria-label="Buy Starter bundle on Stripe" 
+   target="_blank" 
+   rel="noopener">
+  Buy Fan Favorite Bundle
+</a>
+                </div>
+                <!-- TODO: replace the href with your own Stripe Payment Link for the Fan Favorite bundle -->
+              </div>
+            </div>
+
+            <!-- Bundle 3 -->
+            <div class="col-12">
+              <div class="card bundle-card h-100 p-3 position-relative">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <span class="badge bg-success">Best Value</span>
+                </div>
+                <div class="row g-3 align-items-center">
+                  <div class="col-md-4">
+                    <div class="product-thumb d-flex align-items-center justify-content-center text-muted">
+                      <span>Bundle image</span>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <h5 class="card-title mb-1">T‑Shirts + Vinyls (Mega Set)</h5>
+                    <p class="note-muted mb-2">The largest bundle for the ultimate supporter.</p>
+                    <ul class="list-unstyled mb-3">
+                      <li><i class="fa-regular fa-circle-check me-2 text-success"></i>5× T‑shirts (full collection)</li>
+                      <li><i class="fa-regular fa-circle-check me-2 text-success"></i>3× Vinyl records</li>
+                      <li><i class="fa-regular fa-circle-check me-2 text-success"></i>Signed postcard + backer note</li>
+                    </ul>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="fw-bold">$179</div>
+                        <small class="text-muted">limited stock • save 25%</small>
+                      </div>
+<a href="#" 
+   class="btn btn-primary btn-lg" 
+   role="button" 
+   aria-label="Buy Starter bundle on Stripe" 
+   target="_blank" 
+   rel="noopener">
+  Buy Mega  Bundle
+</a>                    </div>
+                  </div>
+                </div>
+                <!-- TODO: replace the href with your own Stripe Payment Link for the Mega bundle -->
+                <a href="#" class="stretched-link" aria-label="Buy Mega bundle on Stripe"></a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column: Info -->
+      <aside class="col-lg-4">
+        <div class="card p-3 sticky-summary">
+          <h5 class="mb-3">How it works</h5>
+          <ol class="mb-3">
+            <li>Click a bundle.</li>
+            <li>You’ll be taken to a secure Stripe checkout page.</li>
+            <li>Complete payment for that bundle.</li>
+          </ol>
+          <div class="alert alert-light border mb-3" role="alert">
+            <i class="fa-regular fa-circle-info me-2"></i>
+            One bundle per purchase. Want multiple bundles? Complete separate checkouts.
+          </div>
+          <small class="text-muted">Questions? <a href="#">Contact Davoice</a></small>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+ <footer class="container my-5 text-center text-muted">
+  <details>
+    <summary>© <span id="year">2025</span> Your Band. All rights reserved.</summary>
+    <p>
+      Made with ❤️ from 
+      <a href="https://thaimorris.com" target="_blank" rel="noopener">
+        Otakusoft LLC
+      </a>
+    </p>
+  </details>
+</footer>
+  
+
+</body>
+</html>
